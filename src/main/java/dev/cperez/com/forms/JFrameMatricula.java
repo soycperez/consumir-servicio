@@ -1,14 +1,16 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package dev.cperez.com.forms;
+
+import dev.cperez.com.implementacion.ImpValidaciones;
+import javax.swing.JOptionPane;
 
 /**
  *
  * @author Cesar Perez
  */
 public class JFrameMatricula extends javax.swing.JFrame {
+
+    ImpValidaciones impValidaciones = new ImpValidaciones();
+    private int key;
 
     /**
      * Creates new form JFrameMatricula
@@ -35,6 +37,12 @@ public class JFrameMatricula extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Login"));
+
+        jTFMatricula.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTFMatriculaKeyTyped(evt);
+            }
+        });
 
         jLabel1.setText("Ingrese Matricula");
 
@@ -95,19 +103,34 @@ public class JFrameMatricula extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+
     private void jBtnIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnIngresarActionPerformed
         try {
-            int clave  = Integer.parseInt(jTFMatricula.getText()); 
-            JFrameInformacion jFrameInformacion = new JFrameInformacion(clave); 
-            this.setVisible(false);
-            jFrameInformacion.setVisible(true);
-            this.dispose(); 
+            if (!(jTFMatricula.getText().isEmpty())) {
+                int clave = Integer.parseInt(jTFMatricula.getText());
+                JFrameInformacion jFrameInformacion = new JFrameInformacion(clave);
+                this.setVisible(false);
+                jFrameInformacion.setVisible(true);
+                this.dispose();
+            } else {
+                JOptionPane.showMessageDialog(null, "No deje campos vacios");
+            }
         } catch (Exception e) {
             System.out.println("Error: " + e);
         }
     }//GEN-LAST:event_jBtnIngresarActionPerformed
 
-    
+    private void jTFMatriculaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTFMatriculaKeyTyped
+        // TODO add your handling code here:
+        this.key = evt.getKeyChar();
+        //System.out.println("ASCII tecla: " + key);
+        if (!impValidaciones.validarNumericos(key) || jTFMatricula.getText().length() >= 10) {
+            evt.consume();
+            JOptionPane.showMessageDialog(null, "Solo caracteres Númericos y longitud máxima de 8 carac.");
+        }
+    }//GEN-LAST:event_jTFMatriculaKeyTyped
+
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jBtnIngresar;
     private javax.swing.JLabel jLabel1;
