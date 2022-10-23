@@ -10,13 +10,22 @@ import dev.cperez.com.implementacion.ImpDato;
 public class ConsumirServicio {
 
     public static void main(String[] args) {
-        
-        ImpDato impDato = new ImpDato(); 
-        Dato dato = new Dato(); 
-        dato.setClave("201853826"); 
-        System.out.println("Consultar datos:");
+
+        ImpDato impDato = new ImpDato();
+        Dato dato = new Dato();
+        Dato datoC = null;
+        dato.setClave("201853826");
+        System.out.println("1.- Consultar datos:");
         impDato.leerJson(dato);
-        
-        System.out.println("Modificar Datos:");
+
+        System.out.println("3.- Modificar Datos:");
+        // Para editar, primero hay que modificar
+        datoC = (Dato) impDato.recuperar(0);
+        datoC.setNom("Alexis");
+        datoC.setApp("Mejia");
+        datoC.setTel("22222222");
+        System.out.println(datoC);
+        impDato.editarJson(datoC);
+
     }
 }

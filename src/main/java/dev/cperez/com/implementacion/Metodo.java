@@ -8,11 +8,13 @@ import java.util.List;
  */
 public interface Metodo {
 
-    void guardar(Object obj);
+    public void guardar(Object obj);
 
-    List<Object> consultar(Object obj);
+    public Object recuperar(int indice);
+    
+    public List<Object> recuperarLista(); 
 
-    void editar(Object indice, Object obj);
+    public void editar(Object indice, Object obj);
 
-    void eliminar(Object obj);
+    public void eliminar(Object obj);
 }

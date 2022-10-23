@@ -7,18 +7,23 @@ import java.util.List;
  *
  * @author Cesar Perez
  */
-public class ImpGenerica implements Metodo{
-    
+public class ImpGenerica implements Metodo {
+
     List<Object> lista = new ArrayList();
 
     @Override
     public void guardar(Object obj) {
-        lista.add(obj); 
+        lista.add(obj);
     }
 
     @Override
-    public List<Object> consultar(Object obj) {
-        return lista; 
+    public Object recuperar(int indice) {
+        return lista.get(indice);
+    }
+
+    @Override
+    public List<Object> recuperarLista() {
+        return lista;
     }
 
     @Override
@@ -30,5 +35,5 @@ public class ImpGenerica implements Metodo{
     public void eliminar(Object obj) {
         lista.remove(obj);
     }
-    
+
 }
