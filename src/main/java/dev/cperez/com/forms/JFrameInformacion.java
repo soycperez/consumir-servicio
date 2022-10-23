@@ -345,7 +345,7 @@ public class JFrameInformacion extends javax.swing.JFrame {
         jTFNom.setText(null);
         jTFApp.setText(null);
         jTFTel.setText(null);
-        this.clave = null;
+        //this.clave = null;
     }
 
     public boolean textFielVacios() {
@@ -455,6 +455,7 @@ public class JFrameInformacion extends javax.swing.JFrame {
             if (this.id == null) {
                 if (!(textFielVacios())) {
                     datoC = new Dato(this.id, jTFNom.getText(), jTFApp.getText(), jTFTel.getText(), this.clave);
+                    System.out.println(datoC);
                     impDato.crearJson(datoC);
                     llenarTabla();
                     limpiarDatos();
