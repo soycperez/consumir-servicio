@@ -34,4 +34,3 @@ La **clave** sirve para identificar el bloque de registro que se han hecho a su 
 El programa esta realizado en la siguiente arquitectura:
 - Java 8 con JFrames.
 - Maven con dependencia: JSON Java.
-# consumir-servicio
