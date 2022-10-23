@@ -16,7 +16,7 @@ El cual recibe un Objecto **Dato** y tiene como parametros:
 Donde el atributo **tipo** puede tomar solo tres valores
 ## **Consultar**
 - Si el valor es **1** se debe añadir la *clave* del Alumno. Quedando 
-de la siguiente maneroa: <br> **servicio.php?tipo=1&clave=201855555**
+de la siguiente manera: <br> **?tipo=1&clave=201855555**
 
 ## **Crear**
 - Si el valor es **2** se deben enviar los demás atributos, para al ultimo añadir la *clave* del Alumno. Quedando de la siguiente manera: <br> **?tipo=2&nom=prueba&app=prueba&tel=2222222222&clave=201855555**
