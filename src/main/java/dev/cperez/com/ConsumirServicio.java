@@ -19,20 +19,26 @@ public class ConsumirServicio {
         System.out.println("1.- Consultar datos:");
         impDato.leerJson(dato);
 
-        /*System.out.println("2.- Crear :");
+        System.out.println("2.- Crear :");
         dato.setNom("PRUEBA");
         dato.setApp("PRUEBA");
         dato.setTel("PRUEBA");
-        impDato.crearJson(dato);*/
+        impDato.crearJson(dato);
 
-        System.out.println("3.- Modificar Datos:");
+        /*System.out.println("3.- Modificar Datos:");
         // Para editar, primero hay que modificar
         datoC = (Dato) impDato.recuperar(0);
         datoC.setNom("Alexis");
         datoC.setApp("Mejia");
         datoC.setTel("22222222");
         System.out.println(datoC);
-        impDato.editarJson(datoC);
+        impDato.editarJson(datoC);*/
+        
+        System.out.println("4.- Eliminar Dato:");
+        // Para editar, primero hay que modificar
+        datoC = (Dato) impDato.recuperar(4);
+        impDato.eliminarJson(datoC);
+        
         
         /*System.out.println("Recuperar lista listaDatoMain:");
         List<Dato> listaDatoMain = (List<Dato>) (Object) impDato.recuperarLista(); 

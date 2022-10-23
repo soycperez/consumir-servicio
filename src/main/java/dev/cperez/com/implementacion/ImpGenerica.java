@@ -17,8 +17,8 @@ public class ImpGenerica implements Metodo {
     }
 
     @Override
-    public Object recuperar(int indice) {
-        return lista.get(indice);
+    public Object recuperar(Object indice) {
+        return lista.get((int) indice);
     }
 
     @Override

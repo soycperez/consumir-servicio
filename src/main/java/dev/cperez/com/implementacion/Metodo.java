@@ -10,7 +10,7 @@ public interface Metodo {
 
     public void guardar(Object obj);
 
-    public Object recuperar(int indice);
+    public Object recuperar(Object indice);
     
     public List<Object> recuperarLista(); 
 
