@@ -1,6 +1,7 @@
 package dev.cperez.com;
 
 import dev.cperez.com.entidad.Dato;
+import dev.cperez.com.forms.JFrameMatricula;
 import dev.cperez.com.implementacion.ImpDato;
 import java.util.List;
 
@@ -11,8 +12,13 @@ import java.util.List;
 public class ConsumirServicio {
 
     public static void main(String[] args) {
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new JFrameMatricula().setVisible(true);
+            }
+        });
 
-        ImpDato impDato = new ImpDato();
+        /*ImpDato impDato = new ImpDato();
         Dato dato = new Dato();
         Dato datoC = null;
         dato.setClave("201853826");
@@ -34,10 +40,10 @@ public class ConsumirServicio {
         System.out.println(datoC);
         impDato.editarJson(datoC);*/
         
-        System.out.println("4.- Eliminar Dato:");
+        /*System.out.println("4.- Eliminar Dato:");
         // Para editar, primero hay que modificar
         datoC = (Dato) impDato.recuperar(4);
-        impDato.eliminarJson(datoC);
+        impDato.eliminarJson(datoC);/*
         
         
         /*System.out.println("Recuperar lista listaDatoMain:");

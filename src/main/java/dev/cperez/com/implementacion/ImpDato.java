@@ -44,7 +44,7 @@ public class ImpDato extends ImpGenerica {
                 JSONArray arrayDato = deserealizarJson(dataJson);
                 //System.out.println(data);
                 insertarLista(arrayDato);
-                System.out.println(lista);
+                //System.out.println(lista);
 
             }
         } catch (Exception e) {
@@ -80,7 +80,7 @@ public class ImpDato extends ImpGenerica {
                 JSONArray arrayDato = deserealizarJson(dataJson);
                 //System.out.println(data);
                 insertarLista(arrayDato);
-                System.out.println(lista);
+                //System.out.println(lista);
 
             }
         } catch (Exception e) {
@@ -116,7 +116,7 @@ public class ImpDato extends ImpGenerica {
                 JSONArray arrayDato = deserealizarJson(dataJson);
                 //System.out.println(data);
                 insertarLista(arrayDato);
-                System.out.println(lista);
+                //System.out.println(lista);
 
             }
         } catch (Exception e) {
@@ -151,7 +151,7 @@ public class ImpDato extends ImpGenerica {
                 JSONArray arrayDato = deserealizarJson(dataJson);
                 //System.out.println(data);
                 insertarLista(arrayDato);
-                System.out.println(lista);
+                //System.out.println(lista);
 
             }
         } catch (Exception e) {
